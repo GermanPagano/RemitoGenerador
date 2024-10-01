@@ -1,0 +1,116 @@
+  /* Ajustamos el contenedor principal del formulario del remito */
+  .remito-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 90%; /* Hacemos que ocupe el 90% del ancho de la pantalla */
+    min-width: 100vh;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  /* Contenedor para organizar los campos en dos columnas */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Cada campo individual ocupa el 48% del ancho de la fila */
+  .form-field {
+    width: 48%;
+  }
+  
+  /* Estilo para las etiquetas y campos de texto */
+  label {
+    display: block;
+    margin: 5px 0;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus {
+    border-color: #28a745;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Botones estilizados */
+  button {
+    background-color: #28a745;
+    color: white;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Ajuste para tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Estilo responsivo para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .remito-container {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .form-row {
+      flex-direction: column; /* En pantallas pequeñas, las columnas se apilan */
+    }
+  
+    .form-field {
+      width: 100%; /* Los campos ocupan todo el ancho en móviles */
+    }
+  
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    table, th, td {
+      font-size: 14px;
+    }
+  }
+  
